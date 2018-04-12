@@ -6,30 +6,25 @@ import { Subject } from 'rxjs/Subject'
 
 @Injectable()
 export class ShoppingcartService {
-  private products: IProduct[]
+    private products: IProduct[]
 
-  private cartChangedSource = new Subject<number>()
-  cartChanged$ = this.cartChangedSource.asObservable()
+    private cartChangedSource = new Subject<number>()
+    cartChanged$ = this.cartChangedSource.asObservable()
 
-  constructor() {
-    this.products = []
-  }
+    constructor() {
+        this.products = []
+    }
 
-  getProducts(): IProduct[] {
-    return this.products
-  }
+    getProducts(): IProduct[] {
+        return this.products
+    }
 
-  addToCart(product: IProduct) {
-    this.products.push(product)
-    this.notifyThatCartChanged()
-  }
+    addToCart(product: IProduct) {
+        this.products.push(product)
+        this.notifyThatCartChanged()
+    }
 
-  removeFromCart(product: IProduct) {
-    this.products.splice(this.products.indexOf(product), 1)
-    this.notifyThatCartChanged()
-  }
-
-  private notifyThatCartChanged(): void {
-    this.cartChangedSource.next(this.products.length)
-  }
+    private notifyThatCartChanged(): void {
+        this.cartChangedSource.next(this.products.length)
+    }
 }

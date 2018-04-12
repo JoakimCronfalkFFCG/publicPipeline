@@ -20,8 +20,8 @@ import { NgxBootstrapComponent } from './containers/ngx-bootstrap-demo/ngx-boots
 
 import { LinkService } from './shared/link.service';
 import { UserService } from './shared/user.service';
-import { ProductService } from './shared/product.service';
-import { ShoppingcartService } from './shared/shoppingcart.service';
+import { ProductService } from './shared/product.service'
+import { ShoppingcartService } from './shared/shoppingcart.service'
 import { ORIGIN_URL } from './shared/constants/baseurl.constants';
 import { TransferHttpModule } from '../modules/transfer-http/transfer-http.module';
 import { TechComponent } from './containers/tech/tech.component'

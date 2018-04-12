@@ -13,15 +13,7 @@ module.exports = function (options) {
       modules: [rootPath('ClientApp'), 'node_modules']
     },
     module: {
-      rules: [{
-          enforce: 'pre',
-          test: /\.js$/,
-          loader: 'source-map-loader',
-          exclude: [
-            rootPath('node_modules/rxjs'),
-            rootPath('node_modules/@angular')
-          ]
-        },
+      rules: [
         {
           test: /\.ts$/,
           use: [{

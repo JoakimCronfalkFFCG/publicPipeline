@@ -1,4 +1,4 @@
-li .glyphicon {
+﻿li .glyphicon {
     margin-right: 10px;
 }
 
@@ -19,14 +19,15 @@ li.link-active a:focus {
     z-index: 1;
 }
 
-.icon-bar {
-  background-color: #4189C7;
-}
-
 .products-badge {
     background-color: orange;
     color: white;
     margin-left: 2px;
+}
+
+
+.icon-bar {
+  background-color: #4189C7;
 }
 
 @media (max-width: 767px) {
